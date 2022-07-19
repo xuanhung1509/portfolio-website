@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Rubik:wght@400;700;800;900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn {
+  @apply hover:bg-portfolio-secondary hover:text-portfolio-primary hover:-translate-y-2 hover:shadow-black/75 hover:shadow-lg border border-portfolio-primary px-6 py-2 rounded-md transition-all;
+}
+
+.btn-primary {
+  @apply bg-portfolio-primary text-black;
+}
+
+.btn-secondary {
+  @apply text-white;
+}
