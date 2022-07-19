@@ -40,7 +40,7 @@ function Header({ heroInView }) {
       className={`fixed ${
         showDesktopMenu ? 'top-0' : '-top-24'
       } left-0 right-0 ${
-        currentScrollpos > 150 && 'bg-portfolio-secondary'
+        currentScrollpos > 20 && 'bg-portfolio-secondary'
       } duration-300 transition-all p-5 z-50`}
     >
       <div className='container'>

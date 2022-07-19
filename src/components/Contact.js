@@ -50,7 +50,7 @@ function Contact() {
       ref={ref}
     >
       <div className='relative container'>
-        <div className='hidden md:block absolute top-0 md:right-4 xl:right-0 md:h-20 xl:h-28 brightness-75'>
+        <div className='hidden lg:block absolute top-0 right-4 xl:right-0 h-20 xl:h-28 brightness-75'>
           <img src={chat} alt='' className='h-full skew-x-12 brightness-50' />
         </div>
         <div className='flex flex-col justify-center items-center gap-8 px-4'>

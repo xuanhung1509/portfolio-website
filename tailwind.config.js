@@ -7,22 +7,6 @@ module.exports = {
         'portfolio-primary': '#FFCA6C',
         'portfolio-secondary': '#34353A',
       },
-
-      animation: {
-        'slide-in': 'slide-in 1s ease',
-      },
-      keyframes: {
-        'slide-in': {
-          '0%': {
-            opacity: 0,
-            transform: 'translateY(6rem)',
-          },
-          '100%': {
-            opacity: 1,
-            transform: 'translateY(0)',
-          },
-        },
-      },
     },
     fontFamily: {
       Rubik: "'Rubik', sans-serif",
