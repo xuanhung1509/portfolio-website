@@ -83,6 +83,8 @@ function WorkItem({
           </a>
           <a
             href={liveSite}
+            target='_blank'
+            rel='noreferrer'
             className='hover:text-portfolio-primary hover:-translate-y-1 rounded-full transition-all p-2'
           >
             <FiExternalLink size={20} />

@@ -1,4 +1,3 @@
-import { BrowserRouter as Router } from 'react-router-dom';
 import { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import Header from './components/Header';
@@ -13,7 +12,7 @@ function App() {
   const [heroInView, setHeroInView] = useState(true);
 
   return (
-    <Router>
+    <>
       <div className='font-Rubik flex flex-col justify-start gap-24 bg-portfolio-secondary'>
         <Header heroInView={heroInView} />
         <Hero setHeroInView={setHeroInView} />
@@ -24,7 +23,7 @@ function App() {
         <VerticalNavigation />
       </div>
       <Toaster />
-    </Router>
+    </>
   );
 }
 export default App;

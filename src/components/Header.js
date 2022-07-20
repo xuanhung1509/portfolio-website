@@ -22,6 +22,8 @@ function Header({ heroInView }) {
 
   // Hide desktop menu on scroll down
   const handleScroll = useCallback(() => {
+    if (showMobileMenu) return;
+
     if (window.pageYOffset > currentScrollpos) {
       setShowHeader(false);
     } else {
@@ -29,7 +31,7 @@ function Header({ heroInView }) {
     }
 
     setCurrentScrollpos(window.pageYOffset);
-  }, [currentScrollpos]);
+  }, [showMobileMenu, currentScrollpos]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);

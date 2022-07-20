@@ -8,3 +8,4 @@
 - [x] Optimize performance on click mobile menu
 - [x] Keep additive content (wave, spark, chat) consistent on different breakpoints
 - [x] Style the outline of form inputs to match the color palette
+- [x] Fix mobile menu on scrolling
