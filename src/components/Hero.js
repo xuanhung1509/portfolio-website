@@ -22,7 +22,7 @@ function Hero({ setHeroInView }) {
       } transition-all duration-1000`}
       ref={ref}
     >
-      <div className='hidden md:block absolute -top-24 md:-right-8 lg:right-0'>
+      <div className='hidden md:block absolute -top-24 -right-8 lg:right-0'>
         <img src={wave} alt='' className='h-full' />
       </div>
 
@@ -38,7 +38,7 @@ function Hero({ setHeroInView }) {
             <h3 className='text-3xl sm:text-2xl md:text-3xl font-bold text-white/75'>
               Web Developer
             </h3>
-            <p className='max-w-[600px] text-lg text-white/50 my-2 md:my-4'>
+            <p className='max-w-xl text-lg text-white/50 my-2 md:my-4'>
               I'm passonate about building high-quality beautiful interactive
               website.
               {/* I code small things with great care, and I love what I

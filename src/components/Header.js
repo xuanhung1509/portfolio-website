@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import useMediaQuery from '../hooks/useMediaQuery';
 import { RiMenu5Line, RiCloseLine } from 'react-icons/ri';
 import { navItems } from '../data';
 import { socialMedia } from '../data';
@@ -7,8 +8,9 @@ import { floatingCTAs } from '../data';
 function Header({ heroInView }) {
   const [currentScrollpos, setCurrentScrollpos] = useState(window.pageYOffset);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [showDesktopMenu, setShowDesktopMenu] = useState(true);
+  const [showHeader, setShowHeader] = useState(true);
   const [hash, setHash] = useState('#home');
+  const isMobile = useMediaQuery('(max-width: 640px)');
 
   // Close mobile menu after click nav item
   const handleClickNavItem = (hash) => {
@@ -21,9 +23,9 @@ function Header({ heroInView }) {
   // Hide desktop menu on scroll down
   const handleScroll = useCallback(() => {
     if (window.pageYOffset > currentScrollpos) {
-      setShowDesktopMenu(false);
+      setShowHeader(false);
     } else {
-      setShowDesktopMenu(true);
+      setShowHeader(true);
     }
 
     setCurrentScrollpos(window.pageYOffset);
@@ -37,9 +39,9 @@ function Header({ heroInView }) {
 
   return (
     <header
-      className={`fixed ${
-        showDesktopMenu ? 'top-0' : '-top-24'
-      } left-0 right-0 ${
+      className={`fixed top-0 left-0 right-0 ${
+        !showHeader && '-translate-y-full'
+      } ${
         currentScrollpos > 20 && 'bg-portfolio-secondary'
       } duration-300 transition-all p-5 z-50`}
     >
@@ -50,32 +52,22 @@ function Header({ heroInView }) {
           </a>
           <button
             type='button'
-            className='relative block sm:hidden p-4 z-50'
+            className='block p-2 sm:hidden z-50'
             onClick={() => setShowMobileMenu((prev) => !prev)}
           >
-            <span
-              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${
-                showMobileMenu ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-90'
-              } transition-all`}
-            >
-              {' '}
+            {showMobileMenu ? (
               <RiCloseLine size={24} fill='#fff' />
-            </span>
-            <span
-              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${
-                showMobileMenu ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'
-              } transition-all`}
-            >
-              {' '}
+            ) : (
               <RiMenu5Line size={24} fill='#fff' />
-            </span>
+            )}
           </button>
           <ul
-            className={`fixed sm:static top-0 ${
-              showMobileMenu
-                ? 'right-0 left-1/4 drop-shadow-2xl'
-                : '-right-full left-full'
-            } bottom-0 transition-all duration-300 flex flex-col sm:flex-row justify-start sm:justify-center items-center sm:items-start gap-8 pt-24 sm:pt-0 bg-portfolio-secondary text-white sm:bg-transparent`}
+            className={`fixed top-0 right-0 bottom-0 left-1/4 sm:static ${
+              isMobile &&
+              `transition-transform duration-300 ${
+                showMobileMenu ? 'shadow-2xl shadow-black' : 'translate-x-full'
+              }`
+            }  flex flex-col sm:flex-row justify-start sm:justify-center items-center sm:items-start gap-8 pt-24 sm:pt-0 bg-portfolio-secondary text-white sm:bg-transparent`}
           >
             {navItems.map((item) => (
               <li key={item.content}>
@@ -88,7 +80,7 @@ function Header({ heroInView }) {
                 >
                   {item.content}
                   <span
-                    className={`block absolute left-0 bottom-0 h-1 w-full bg-portfolio-primary origin-left scale-x-0 group-hover:scale-x-100 ${
+                    className={`block absolute left-0 bottom-0 h-1 w-full bg-portfolio-primary origin-right group-hover:origin-left scale-x-0 group-hover:scale-x-100 ${
                       hash === item.hash && 'scale-x-100'
                     } transition-transform`}
                   ></span>

@@ -34,7 +34,7 @@ function WorkItem({
           id % 2 === 0 ? 'col-start-6 col-end-[-1]' : 'col-start-1 col-span-7'
         } md:row-start-1 md:row-span-5 bg-portfolio-primary/50 rounded-md overflow-hidden mb-8 md:mb-0`}
       >
-        <a href={liveSite}>
+        <a href={liveSite} target='_blank' rel='noreferrer'>
           <img
             src={images[isTablet ? 'tablet' : 'desktop']}
             alt=''
@@ -47,25 +47,25 @@ function WorkItem({
       <div
         className={`relative items-center text-center ${
           id % 2 === 0
-            ? 'col-start-1 col-span-6 sm:items-start sm:text-left'
-            : 'col-start-7 col-end-[-1] sm:items-end sm:text-right'
+            ? 'col-start-1 col-span-6 md:items-start md:text-left'
+            : 'col-start-7 col-end-[-1] md:items-end md:text-right'
         }  row-start-3 row-span-1 flex flex-col gap-4 z-10`}
       >
         {/* Index accent */}
         <div
-          className={`hidden sm:block absolute top-6 md:top-0 ${
+          className={`hidden md:block absolute top-6 md:top-0 ${
             id % 2 === 0 ? 'left-0 -translate-x-8' : 'right-0 translate-x-8'
-          } -translate-y-1/2 text-9xl font-black text-portfolio-secondary -z-50`}
+          } -translate-y-1/2 text-9xl font-black text-portfolio-primary/10 -z-50`}
         >
           0{id}
         </div>
-        <h4 className='text-2xl font-bold mb-2 sm:mb-4'>{title}</h4>
+        <h4 className='text-2xl font-bold mb-2 md:mb-4'>{title}</h4>
         <p className='bg-portfolio-primary text-portfolio-secondary p-5 rounded-md shadow-xl'>
           {description}
         </p>
         <div
-          className={`flex flex-wrap ${
-            id % 2 === 0 ? 'justify-start' : 'justify-end'
+          className={`flex flex-wrap justify-center ${
+            id % 2 === 0 ? 'md:justify-start' : 'md:justify-end'
           } items-center gap-3`}
         >
           {tags.map((tag) => (

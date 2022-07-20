@@ -115,7 +115,7 @@ function Contact() {
                           name={item.id}
                           placeholder={item.placeholder}
                           required={item.required}
-                          className='w-full text-black px-4 py-2 rounded-md'
+                          className='w-full text-black px-4 py-2 rounded-md focus:outline-portfolio-primary'
                         ></textarea>
                       ) : (
                         <input
@@ -124,7 +124,7 @@ function Contact() {
                           name={item.id}
                           placeholder={item.placeholder}
                           required={item.required}
-                          className='w-full text-black px-4 py-2 rounded-md'
+                          className='w-full text-black px-4 py-2 rounded-md focus:outline-portfolio-primary'
                         />
                       )}
                     </div>

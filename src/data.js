@@ -43,7 +43,7 @@ export const projects = [
       tablet: commentTablet,
     },
     tags: ['React', 'SCSS', 'Firebase'],
-    liveSite: 'https://comment-section-1509.netlify.app/',
+    liveSite: 'https://comment.xuanhung.me/',
     sourceCode: 'https://github.com/xuanhung1509/interactive-comment-section',
   },
   {
@@ -56,7 +56,7 @@ export const projects = [
       tablet: todoTablet,
     },
     tags: ['React', 'SCSS', 'Firebase'],
-    liveSite: 'https://todo-hub-1509.netlify.app/',
+    liveSite: 'https://todo.xuanhung.me/',
     sourceCode: 'https://github.com/xuanhung1509/todo-hub',
   },
   {
