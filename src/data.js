@@ -1,11 +1,4 @@
-import {
-  FiGithub,
-  FiFacebook,
-  FiCodepen,
-  FiDownload,
-  FiMessageSquare,
-} from 'react-icons/fi';
-
+import { FiGithub, FiFacebook, FiCodepen } from 'react-icons/fi';
 import commentDesktop from './assets/comment-desktop.jpg';
 import commentTablet from './assets/comment-tablet.jpg';
 import todoDesktop from './assets/todo-desktop.jpg';
@@ -69,7 +62,7 @@ export const projects = [
       tablet: sneakersTablet,
     },
     tags: ['React', 'Redux', 'Express', 'MongoDB', 'Swiper', 'Paypal'],
-    liveSite: 'https://sneakers-1509.herokuapp.com/',
+    liveSite: 'https://sneakers.xuanhung.me/',
     sourceCode: 'https://github.com/xuanhung1509/sneakers-ecommerce',
   },
 ];
@@ -89,19 +82,6 @@ export const socialMedia = [
     id: 'codepen',
     icon: <FiCodepen size={20} />,
     link: 'https://codepen.io/xuanhung1509',
-  },
-];
-
-export const floatingCTAs = [
-  {
-    text: 'View Resumé',
-    icon: <FiDownload size={20} />,
-    link: '/resume.pdf',
-  },
-  {
-    text: 'Contact Me',
-    icon: <FiMessageSquare size={20} />,
-    link: '#contact',
   },
 ];
 

@@ -3,7 +3,6 @@ import useMediaQuery from '../hooks/useMediaQuery';
 import { RiMenu5Line, RiCloseLine } from 'react-icons/ri';
 import { navItems } from '../data';
 import { socialMedia } from '../data';
-import { floatingCTAs } from '../data';
 
 function Header({ heroInView }) {
   const [currentScrollpos, setCurrentScrollpos] = useState(window.pageYOffset);
@@ -105,27 +104,6 @@ function Header({ heroInView }) {
           </ul>
         </div>
       </div>
-
-      {/* Show floating CTA in mobile */}
-      {!heroInView && !showMobileMenu && (
-        <ul className='fixed bottom-8 left-8 flex sm:hidden items-center gap-6 bg-portfolio-primary/25 backdrop-blur-sm px-6 py-3 rounded-full shadow-xl'>
-          {floatingCTAs.map((item) => (
-            <li key={item.text}>
-              <a
-                href={item.link}
-                className='flex flex-col items-center gap-1 group'
-              >
-                <span className='hover:text-portfolio-primary hover:-translate-y-1 transition-all'>
-                  {item.icon}
-                </span>
-                <span className='w-28 absolute -top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-xs font-bold text-center bg-portfolio-primary text-portfolio-secondary px-2 py-1 rounded-full'>
-                  {item.text}
-                </span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
     </header>
   );
 }
