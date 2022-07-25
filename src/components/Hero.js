@@ -39,10 +39,8 @@ function Hero({ setHeroInView }) {
               Web Developer
             </h3>
             <p className='max-w-xl text-lg text-white/50 my-2 md:my-4'>
-              I'm passonate about building high-quality beautiful interactive
-              website.
-              {/* I code small things with great care, and I love what I
-              do. */}
+              I'm passionate about build exceptional websites that solve the
+              problems of those around me.
             </p>
             <div className='flex flex-wrap justify-center md:justify-start items-center gap-4'>
               <a

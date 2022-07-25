@@ -30,12 +30,12 @@ export const projects = [
     id: 1,
     title: 'Interactive Comment Section',
     description:
-      'A small CRUD app in which users can post new comments or reply to current ones, upvote/downvote, and more.',
+      'A small piece of app in which users can post comments or reply to current ones, upvote/downvote, and more.',
     images: {
       desktop: commentDesktop,
       tablet: commentTablet,
     },
-    tags: ['React', 'SCSS', 'Firebase'],
+    tags: ['React', 'Firebase'],
     liveSite: 'https://comment.xuanhung.me/',
     sourceCode: 'https://github.com/xuanhung1509/interactive-comment-section',
   },
@@ -43,7 +43,7 @@ export const projects = [
     id: 2,
     title: 'TodoHub',
     description:
-      'The classic todo-list plus authentication, dark-theme and drag & drop feature. Users can sign in/up for account, customize profile picture. Add, check and filter tasks. Toggle between light & dark mode, and more.',
+      'The classic todo-list plus authentication, dark-theme and drag & drop. Users can sign up for an account, customize profile picture. Add, check and filter tasks, and much more.',
     images: {
       desktop: todoDesktop,
       tablet: todoTablet,
@@ -56,12 +56,20 @@ export const projects = [
     id: 3,
     title: 'Sneakers E-commerce',
     description:
-      'A multi-page e-commerce website with payment implementation. Users can view product info including images, description and price, add them to the cart and pay with Paypal or credit card.',
+      'A multi-page e-commerce website with payment implementation. Users can view product info, add to cart and pay with Paypal or credit card.',
     images: {
       desktop: sneakersDesktop,
       tablet: sneakersTablet,
     },
-    tags: ['React', 'Redux', 'Express', 'MongoDB', 'Swiper', 'Paypal'],
+    tags: [
+      'React',
+      'Redux',
+      'Express',
+      'MongoDB',
+      'Tailwind CSS',
+      'Swiper',
+      'Paypal',
+    ],
     liveSite: 'https://sneakers.xuanhung.me/',
     sourceCode: 'https://github.com/xuanhung1509/sneakers-ecommerce',
   },

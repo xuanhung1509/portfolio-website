@@ -33,15 +33,26 @@ function About() {
             <h2 className='flex flex-col md:flex-row items-center gap-8 text-3xl sm:text-4xl font-bold after:block after:h-1 after:flex-1 after:bg-portfolio-primary after:rounded-md'>
               About Me
             </h2>
-            <p className='max-w-md mx-auto'>
-              Despite my major of economics, I always have the passion for
-              technology. My interest in web development sparked back in 2020
-              when I tried to build my blog using Wix.
-            </p>
-            <p>
-              Since then, I had touched different concepts in web development.
-              Some of the languages and technologies I specialize in are:
-            </p>
+            <div className='max-w-md mx-auto'>
+              <p>
+                Despite my majoring in economics, I always have a passion for
+                technology. My interest in web development sparked back in 2021
+                after enrolling in{' '}
+                <a
+                  href='https://coursera.org/share/a112855459cad20cdf5574eb78164961'
+                  target='_blank'
+                  rel='noreferrer'
+                  className='text-portfolio-primary border-b border-portfolio-primary'
+                >
+                  a Python course series on Coursera.
+                </a>{' '}
+              </p>
+              <p>
+                Since then, I have touched different concepts in web development
+                and programming in general. Here's some of the languages and
+                technologies I specialized in:
+              </p>
+            </div>
             <div className='grid grid-cols-9 items-center gap-2 mt-1 mb-3'>
               <span className='col-start-4 md:col-start-1'>
                 <img src={react} alt='' />
@@ -72,7 +83,10 @@ function About() {
               </span>
             </div>
 
-            <p>And I'm always willing to learn new technologies.</p>
+            <p className='max-w-md mx-auto'>
+              And I'm always excited to learn new technologies as I move
+              forward.
+            </p>
           </div>
         </div>
       </div>
