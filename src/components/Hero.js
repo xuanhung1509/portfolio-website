@@ -22,7 +22,7 @@ function Hero({ setHeroInView }) {
       } transition-all duration-1000`}
       ref={ref}
     >
-      <div className='hidden md:block absolute -top-24 -right-8 lg:right-0'>
+      <div className='hidden lg:block absolute -top-24 right-0'>
         <img src={wave} alt='' className='h-full' />
       </div>
 
