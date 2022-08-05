@@ -4,7 +4,7 @@ import { RiMenu5Line, RiCloseLine } from 'react-icons/ri';
 import { navItems } from '../data';
 import { socialMedia } from '../data';
 
-function Header({ heroInView }) {
+function Header() {
   const [currentScrollpos, setCurrentScrollpos] = useState(window.pageYOffset);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
@@ -68,7 +68,7 @@ function Header({ heroInView }) {
               `transition-transform duration-300 ${
                 showMobileMenu ? 'shadow-2xl shadow-black' : 'translate-x-full'
               }`
-            }  flex flex-col sm:flex-row justify-start sm:justify-center items-center sm:items-start gap-8 pt-24 sm:pt-0 bg-portfolio-secondary text-white sm:bg-transparent`}
+            } flex flex-col sm:flex-row justify-start sm:justify-center items-center sm:items-start gap-8 pt-24 sm:pt-0 bg-portfolio-secondary text-white sm:bg-transparent`}
           >
             {navItems.map((item) => (
               <li key={item.content}>

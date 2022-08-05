@@ -1,18 +1,13 @@
-import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import webDevelopment from '../assets/web-development.png';
 import wave from '../assets/wave.png';
 import spark from '../assets/spark.png';
 
-function Hero({ setHeroInView }) {
+function Hero() {
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: '-100px 0px',
   });
-
-  useEffect(() => {
-    setHeroInView(inView);
-  }, [inView, setHeroInView]);
 
   return (
     <section
