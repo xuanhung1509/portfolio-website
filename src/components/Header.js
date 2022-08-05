@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import useMediaQuery from '../hooks/useMediaQuery';
 import { RiMenu5Line, RiCloseLine } from 'react-icons/ri';
 import { navItems } from '../data';
@@ -10,6 +10,16 @@ function Header() {
   const [showHeader, setShowHeader] = useState(true);
   const [hash, setHash] = useState('#home');
   const isMobile = useMediaQuery('(max-width: 640px)');
+
+  // Disable mobile menu transition on first load
+  const menuTransition = useRef(false);
+
+  const handleClickMobileMenu = () => {
+    // Enable mobile menu transition
+    menuTransition.current = true;
+
+    setShowMobileMenu((prev) => !prev);
+  };
 
   // Close mobile menu after click nav item
   const handleClickNavItem = (hash) => {
@@ -54,7 +64,7 @@ function Header() {
           <button
             type='button'
             className='block p-2 sm:hidden z-50'
-            onClick={() => setShowMobileMenu((prev) => !prev)}
+            onClick={handleClickMobileMenu}
           >
             {showMobileMenu ? (
               <RiCloseLine size={24} fill='#fff' />
@@ -65,7 +75,9 @@ function Header() {
           <ul
             className={`fixed top-0 right-0 bottom-0 left-1/4 sm:static ${
               isMobile &&
-              `transition-transform duration-300 ${
+              `${
+                menuTransition.current && 'transition-transform duration-300'
+              } ${
                 showMobileMenu ? 'shadow-2xl shadow-black' : 'translate-x-full'
               }`
             } flex flex-col sm:flex-row justify-start sm:justify-center items-center sm:items-start gap-8 pt-24 sm:pt-0 bg-portfolio-secondary text-white sm:bg-transparent`}
