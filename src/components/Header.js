@@ -1,8 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import useMediaQuery from '../hooks/useMediaQuery';
 import { RiMenu5Line, RiCloseLine } from 'react-icons/ri';
-import { navItems } from '../data';
-import { socialMedia } from '../data';
+import useMediaQuery from '../hooks/useMediaQuery';
+import { navItems, socialMedia } from '../data';
 
 function Header() {
   const [currentScrollpos, setCurrentScrollpos] = useState(window.pageYOffset);
@@ -48,6 +47,17 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [currentScrollpos, handleScroll]);
 
+  // Prevent scroll when mobile menu open
+  useEffect(() => {
+    const body = document.body;
+
+    if (showMobileMenu) {
+      body.classList.add('overflow-hidden');
+    } else {
+      body.classList.remove('overflow-hidden');
+    }
+  }, [showMobileMenu]);
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 ${
@@ -72,6 +82,15 @@ function Header() {
               <RiMenu5Line size={24} fill='#fff' />
             )}
           </button>
+
+          {/* Mobile menu backdrop  */}
+          <div
+            className={`fixed top-0 right-0 w-full h-full bg-slate-900 ${
+              showMobileMenu ? 'opacity-50' : 'opacity-0 translate-x-full'
+            } transition-opacity duration-300 overflow-hidden`}
+            onClick={() => setShowMobileMenu(false)}
+          ></div>
+
           <ul
             className={`fixed top-0 right-0 bottom-0 left-1/4 sm:static ${
               isMobile &&
