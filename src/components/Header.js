@@ -47,6 +47,17 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [currentScrollpos, handleScroll]);
 
+  // Prevent scroll when mobile menu open
+  useEffect(() => {
+    const body = document.body;
+
+    if (showMobileMenu) {
+      body.classList.add('overflow-hidden');
+    } else {
+      body.classList.remove('overflow-hidden');
+    }
+  }, [showMobileMenu]);
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 ${
