@@ -9,7 +9,7 @@ html {
 }
 
 .btn {
-  @apply hover:bg-portfolio-secondary hover:text-portfolio-primary hover:-translate-y-2 hover:shadow-black/75 hover:shadow-lg border border-portfolio-primary px-6 py-2 rounded-md transition-all;
+  @apply hover:bg-portfolio-secondary hover:text-portfolio-primary hover:-translate-y-1 hover:shadow-black/75 hover:shadow-lg border border-portfolio-primary px-6 py-2 rounded-md transition-all;
 }
 
 .btn-primary {
