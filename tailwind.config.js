@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./src/**/*.{js,jsx}'],
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        'portfolio-primary': '#FFCA6C',
-        'portfolio-secondary': '#34353A',
+        "portfolio-primary": "#FFCA6C",
+        "portfolio-secondary": "#34353A",
       },
     },
     fontFamily: {
@@ -15,15 +15,15 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
+        DEFAULT: "1rem",
+        sm: "2rem",
       },
       screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1024px',
-        '2xl': '1024px',
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1024px",
+        "2xl": "1024px",
       },
     },
   },
