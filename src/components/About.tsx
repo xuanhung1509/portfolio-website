@@ -1,14 +1,6 @@
 import { useInView } from "react-intersection-observer";
 
-import css from "../assets/css.png";
-import figma from "../assets/figma.png";
-import git from "../assets/git.png";
 import growth from "../assets/growth.png";
-import javascript from "../assets/javascript.png";
-import linux from "../assets/linux.png";
-import mongodb from "../assets/mongodb.png";
-import node from "../assets/node.png";
-import react from "../assets/react.png";
 
 function About() {
   const { ref, inView } = useInView({
