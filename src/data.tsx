@@ -1,10 +1,12 @@
 import { FiGithub, FiFacebook, FiCodepen } from "react-icons/fi";
-import bloggerumDesktop from "./assets/bloggerum-desktop.png";
-import bloggerumTablet from "./assets/bloggerum-tablet.png";
-import questionLibDesktop from "./assets/question-lib-desktop.png";
-import questionLibTablet from "./assets/question-lib-tablet.png";
-import duyenkimDesktop from "./assets/duyenkim-desktop.png";
-import duyenkimTablet from "./assets/duyenkim-tablet.png";
+import bloggerumDesktop from "./assets/bloggerum-desktop.jpg";
+import bloggerumTablet from "./assets/bloggerum-tablet.jpg";
+import questionLibDesktop from "./assets/question-lib-desktop.jpg";
+import questionLibTablet from "./assets/question-lib-tablet.jpg";
+import carouselDesktop from "./assets/carousel-desktop.jpg";
+import carouselTablet from "./assets/carousel-tablet.jpg";
+import duyenkimDesktop from "./assets/duyenkim-desktop.jpg";
+import duyenkimTablet from "./assets/duyenkim-tablet.jpg";
 import { WorkItemProps } from "./types";
 
 export const navItems = [
@@ -55,6 +57,20 @@ export const projects: WorkItemProps[] = [
   },
   {
     id: 3,
+    title: "Embla Carousel component for React | Monorepo with yarn workspace",
+    description:
+      "Built on top of the Embla Carousel React hook with declarative API. Available on NPM registry. The project itself is a monorepo with yarn workspace.",
+    images: {
+      desktop: carouselDesktop,
+      tablet: carouselTablet,
+    },
+    tags: ["React", "Carousel", "Typescript", "Monorepo"],
+    liveSite: "https://carousel.xuanhung.dev/",
+    sourceCode:
+      "https://github.com/xuanhung1509/embla-carousel-react-component",
+  },
+  {
+    id: 4,
     title: "Duyenkim | Beauty & Haircare E-Commerce website",
     description:
       "A website featuring end-user store and admin dashboard for my client based in Hanoi.",
@@ -62,7 +78,7 @@ export const projects: WorkItemProps[] = [
       desktop: duyenkimDesktop,
       tablet: duyenkimTablet,
     },
-    tags: ["NextJS", "Typescript", "Sanity CMS"],
+    tags: ["NextJS", "Typescript", "SanityCMS"],
     liveSite: "https://www.duyenkim.com/",
     sourceCode: null,
   },
